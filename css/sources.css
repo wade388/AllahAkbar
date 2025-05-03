@@ -149,7 +149,9 @@ body {
     color: #333;
     margin-bottom: 10px;
 }
-
+.program-text h1 span{
+    color: #426e6e;
+}
 .program-text p{
     font-size: 20px;
 }
