@@ -1,0 +1,353 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/*  الصفحة الرئيسية */
+body {
+    font-family: 'Cairo', sans-serif;
+    line-height: 1.7;
+    background-color: #f7f7f7;
+    color: #333;
+    direction: rtl;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* تنظيم المحتوى الرئيسية */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* نافذة الترحيب  */
+.welcome-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeInPopup 1s ease-in-out;
+}
+
+/*  محتوى نافذة الترحيب */
+.popup-content {
+    background: #fff;
+    color: #333;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    animation: scaleUp 0.5s ease-in-out;
+}
+
+/*  عنوان نافذة الترحيب */
+.popup-content h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #2f4f4f;
+}
+
+/*  نص نافذة الترحيب */
+.popup-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/*  زر إغلاق نافذة الترحيب */
+.close-btn {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #ff7f0e, #ffbb33);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/*  شريط التنقل */
+.navbar {
+    background: #2f4f4f;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/*  شريط التنقل عند التمرير */
+.navbar.scrolled {
+    background: rgba(47, 79, 79, 0.9);
+    box-shadow: rgba(26, 25, 25, 0.253);
+}
+
+/*  محتوى شريط التنقل */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    direction: rtl;
+}
+
+/* تصميم الشعار في شريط التنقل */
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* تصميم ازرار التنقل */
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+/* تصميم داخل شريط التنقل */
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 8px 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* تأثيرالتمرير على الازرار */
+.nav-links li a:hover {
+    color: #ffbb33;
+    transform: scale(1.05);
+}
+
+/* تصميم قائمة الهاتف */
+.dropdown-content {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    background: #fff;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 999;
+}
+
+/* عرض القائمة الهاتف عند التمرير */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* تصميم الازرار داخل القائمة المنسدلة */
+.dropdown-content li a {
+    color: #333333;
+    padding: 10px 20px;
+    display: block;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+
+/* تصميم الرأس الرئيسي للصفحة */
+.main-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1535223289827-42f1e9919769?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    flex-direction: column;
+    padding: 0 20px;
+    padding-top: 120px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* تصميم عنوان الرأس الرئيسي */
+.main-header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    animation: slideUp 1.5s ease-out forwards;
+}
+
+/* تصميم النصوص  */
+.main-header p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    animation: slideDown 1.5s ease-out forwards;
+}
+
+/* تصميم الأزرار في الرأس الرئيسي */
+.btn {
+    padding: 12px 25px;
+    background-color: transparent;
+    color: #ffbb33;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+/* تأثير عند تمرير الماوس على الأزرار */
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffbb33;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* تصميم الأقسام العامة */
+section {
+    padding: 100px 0;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.7s ease-out;
+}
+
+/* تأثير ظهور الأقسام */
+.show-section {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* تصميم العناوين داخل الأقسام */
+section h2 {
+    font-size: 2.8rem;
+    color: #2f4f4f;
+    margin-bottom: 20px;
+}
+
+/* تصميم النصوص داخل الأقسام */
+section p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: auto;
+    color: #2f4f4f;
+}
+
+/* تصميم الفوتر */
+.footer {
+    background: #2f4f4f;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1rem;
+}
+
+/* تأثيرات الحركة  ظهور العناصر */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* تأثيرات الحركة  انزلاق للأعلى */
+@keyframes slideUp {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* تأثيرات الحركة  انزلاق للأسفل */
+@keyframes slideDown {
+    0% { opacity: 0; transform: translateY(-50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* تأثيرات الحركة  ظهور نافذة الترحيب */
+@keyframes fadeInPopup {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* تأثيرات الحركة  تكبير نافذة الترحيب */
+@keyframes scaleUp {
+    0% { transform: scale(0.8); }
+    100% { transform: scale(1); }
+}
+
+/* استجابة الشاشة الصغيرة */
+@media (max-width: 768px) {
+    /* إظهار زر القائمة */
+    .menu-icon {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+    }
+
+    .menu-icon span {
+        width: 25px;
+        height: 3px;
+        background: #fff;
+        margin: 4px 0;
+        transition: all 0.3s ease;
+    }
+
+    /* إخفاء قائمة التنقل الافتراضية */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #2f4f4f;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        padding: 20px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* إظهار قائمة التنقل عند النقر على زر القائمة */
+    .nav-links.active {
+        display: flex;
+    }
+
+    /* تصميم الروابط في قائمة التنقل للهواتف */
+    .nav-links li {
+        margin-bottom: 15px;
+        text-align: right;
+    }
+
+    .nav-links li a {
+        color: #fff;
+        font-size: 1.2rem;
+        padding: 10px 20px;
+    }
+
+    .main-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .main-header p {
+        font-size: 1.2rem;
+    }
+
+    section h2 {
+        font-size: 2.2rem;
+    }
+}

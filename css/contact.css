@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+  }
+  
+  /* الصفحة الرئيسية */
+  body {
+    background-color: #f9f9f9;
+    color: #333;
+    direction: rtl;
+    line-height: 1.7;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* تصميم شريط التنقل */
+  .navbar {
+    background: #2f4f4f;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* تنظيم محتوى شريط التنقل */
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 27px;
+    direction: rtl;
+  }
+  
+  /*الشعار */
+  .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  /*  قائمة الازرار في شريط التنقل */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+  }
+  
+  /* تصميم الازرار داخل شريط التنقل */
+  .nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 8px 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* تأثير عند تمرير  */
+  .nav-links li a:hover {
+    color: #ffbb33;
+    transform: scale(1.05);
+  }
+  .dropdown-content {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    background: #fff;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 999;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content li a {
+    color: #333;
+    padding: 10px 20px;
+    display: block;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.dropdown-content li a:hover {
+    background-color: #f4f4f4;
+}
+  
+  /*  قسم التواصل مع المطورين */
+  .contact-info {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    margin-top: 80px;
+    text-align: center;
+    flex: 1; 
+  }
+  
+  /*  عنوان قسم التواصل */
+  .contact-info h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  /* نصوص  قسم التواصل */
+  .contact-info p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 40px;
+  }
+  
+  /*  قائمة المطورين */
+  .developers-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+  }
+  
+  /*  بطاقات المطورين */
+  .developer-card {
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    border: 2px solid #2f4f4f;
+    border-radius: 20px;
+    padding: 30px;
+    width: 350px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  }
+  
+  /* تأثير  التمرير البطاقات */
+  .developer-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(145deg, #f0f0f0, #ffffff);
+  }
+  
+  /* تصميم صور المطورين */
+  .developer-image {
+    width: 150px; 
+    height: 150px; 
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 20px;
+    border: 4px solid #ffbb33;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* تأثير  التمرير على الصورة */
+  .developer-card:hover .developer-image {
+    border-color: #2f4f4f;
+    transform: scale(1.1);
+  }
+  
+  /*  اسم المطور */
+  .developer-card h4 {
+    font-size: 1.5rem; 
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* ازرار التواصل*/
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .social-links a {
+    color: #333;
+    font-size: 2rem; 
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .social-links a:hover {
+    color: #ffbb33;
+    transform: scale(1.3);
+  }
+  
+  /* تصميم الفوتر */
+  .footer {
+    background: #2f4f4f;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+  }

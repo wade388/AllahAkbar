@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مشاريع الطلاب</title>
+  <link rel="stylesheet" href="css/Projects.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- شريط التنقل -->
+  <nav class="navbar">
+    <div class="nav-container">
+        <h2 class="logo">BTEC IT</h2>
+        <ul class="nav-links">
+            <li><a href="home.html" class="nav-btn">الرئيسية</a></li>
+            <li><a href="sources.html" class="nav-btn">عن البرنامج</a></li>
+            <li class="dropdown">
+                <a href="#" class="nav-btn">مصادر</a>
+                <ul class="dropdown-content">
+                    <li><a href="sources.html">برنامج المعلم</a></li>
+                    <li><a href="Programs.html">برامج الطلاب</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html" class="nav-btn"> تواصل معنا</a></li>
+        </ul>
+    </div>
+  </nav>
+
+  <!-- قسم رفع المشاريع)-->
+  <section id="upload-section" class="upload-info">
+    <div class="container">
+      <h3>رفع مشروع جديد</h3>
+      <p>لرفع مشروعك، قم بتحميل البرنامج الخاص برفع المشاريع.</p>
+
+      <!-- زر تحميل البرنامج -->
+      <a href="path/to/your-program.exe" download class="btn download-btn">
+        <i class="fas fa-download"></i> تحميل البرنامج
+      </a>
+    </div>
+  </section>
+
+  <!-- قسم عرض المشاريع -->
+  <section id="projects-section" class="projects-info">
+    <div class="container">
+      <h3>مشاريع الطلاب</h3>
+      <div id="projects-list" class="projects-list">
+      </div>
+    </div>
+  </section>
+
+  <script src="js/Project.js"></script>
+</body>
+</html>

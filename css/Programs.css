@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Cairo', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    direction: rtl;
+    line-height: 1.7;
+    overflow-x: hidden;
+    opacity: 0;
+    min-height: vh;
+    animation: fadeIn 1s forwards;
+  }
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  /* شريط التنقل */
+  .navbar {
+    background: #2f4f4f;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    animation: slideDownNavbar 0.6s forwards;
+  }
+  
+  @keyframes slideDownNavbar {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 27px;
+  }
+  
+  .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 8px 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .nav-links li a:hover {
+    color: #ffbb33;
+    transform: scale(1.05);
+  }
+  
+  /* قسم البرامج */
+  .program-info {
+    padding: 50px;
+    background-color: #ffffff;
+    margin-top: 130px;
+    animation: fadeInUpProgramInfo 0.8s forwards;
+  }
+  
+  @keyframes fadeInUpProgramInfo {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  .program-info h3 {
+    font-size: 2.1rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .program-info p {
+    font-size: 1.3rem;
+    color: #666;
+    margin-bottom: 25px;
+  }
+  
+  .programs-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  /* البطاقة */
+  .program-card {
+    display: flex;
+    align-items: stretch;
+    background-color: #fff;
+    border: 3px solid #2f4f4f;
+    border-radius: 25px;
+    box-shadow: 0 28px 50px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 950px;
+    margin: 0 auto;
+    height: 300px;
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  
+  /* تأثير ظهور البطاقة */
+  @keyframes slideUpCard {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  .program-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .program-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 9px;
+    object-fit: cover;
+    margin: 15px;
+    flex-shrink: 0;
+  }
+  
+  .program-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 15px;
+  }
+  
+  .program-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .program-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .program-meta p {
+    font-size: 1rem;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .program-meta i {
+    color: #ffbb33;
+  }
+  
+  .program-description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    
+  }
+  
+  .program-level {
+    margin-top: 15px;
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+  .program-level strong {
+    color: #ffbb33;
+    font-weight: bold;
+  }
+  
+  /* زر التحميل */
+  .program-card .btn {
+    padding: 10px 15px;
+    background-color: #2f4f4f;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .program-card .btn i {
+    color: #ffbb33;
+    transition: color 0.3s ease;
+  }
+  
+  .program-card .btn:hover i {
+    color: #fff;
+  }
+  
+  .program-card .btn:hover {
+    background-color: #ffbb33;
+    transform: scale(1.05);
+  }
+  
+  /* الفوتر */
+  .footer {
+    background: #2f4f4f;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    animation: fadeInFooter 0.8s 1s forwards;
+  }
+  
+  @keyframes fadeInFooter {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  

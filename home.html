@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>موقع BTEC IT</title>
+  <link rel="stylesheet" href="css/home.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- نافذة الترحيب المنبثقة -->
+  <div class="welcome-popup">
+    <div class="popup-content">
+      <h2>أهلاً بك في موقع BTEC IT</h2>
+      <p>المطور من قبل وديع شطناوي </p>
+      <button id="start-btn" class="close-btn">ابدأ التصفح</button>
+    </div>
+  </div>
+
+  <!-- شريط التنقل -->
+  <nav class="navbar">
+    <!-- زر القائمة للهواتف -->
+    <div class="menu-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="nav-container">
+        <h2 class="logo">BTEC IT</h2>
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-btn">الرئيسية</a></li>
+            <li><a href="sources.html" class="nav-btn">عن البرنامج</a></li>
+            <li><a href="contact.html" class="nav-btn">تواصل معنا</a></li>
+            <li class="dropdown">
+                <a href="#" class="nav-btn">مصادر</a>
+                <ul class="dropdown-content">
+                    <li><a href="sources.html">برنامج المعلم</a></li>
+                    <li><a href="Programs.html">برامج الطلاب</a></li>
+                </ul>
+            </li>
+            <li><a href="Projects.html" class="nav-btn"> مشاريع</a></li>
+        </ul>
+    </div>
+  </nav>
+
+  <!-- الرأس الرئيسي -->
+  <header id="home" class="main-header">
+    <div class="container">
+      <h1>ابدأ مستقبلك مع BTEC IT</h1>
+      <p>رحلة عملية لتعلم البرمجة، الشبكات، وقواعد البيانات باحترافية</p>
+      <a href="#about" class="btn" aria-label="تعرف أكثر عن البرنامج">تعرف أكثر</a>
+    </div>
+  </header>
+
+  <section id="about" class="about-section">
+    <div class="container">
+      <h2>عن BTEC IT</h2>
+      <p>BTEC IT هو برنامج عملي يطور مهاراتك في عالم التقنية، ويركز على المهارات التطبيقية المطلوبة لسوق العمل.</p>
+    </div>
+  </section>
+
+  <!-- قسم "مقررات البرنامج" -->
+  <section id="courses" class="courses-section">
+    <div class="container">
+      <h2>مقررات البرنامج</h2>
+      <p>برمجة - شبكات حاسوب - قواعد بيانات - تطوير برمجيات - أمن معلومات.</p>
+    </div>
+  </section>
+
+  <!-- قسم "تواصل معنا" -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2>تواصل معنا</h2>
+      <p>لأي استفسارات أو تسجيل، تواصل مع فريقنا المختص عبر البريد الإلكتروني أو الهاتف.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; wade3</p>
+    </div>
+  </footer>
+
+  <script src="js/home.js"></script>
+</body>
+</html>
