@@ -9,19 +9,32 @@
 </head>
 <body>
 
-  <nav class="navbar">
-    <div class="nav-container">
-        <h2 class="logo">BTEC IT</h2>
-        <ul class="nav-links">
-            <li><a href="home.html" class="nav-btn">الرئيسية</a></li>
-            <li><a href="Projects.html" class="nav-btn">مشاريع </a></li>
-            <li class="dropdown">
-                <a href="Programs.html" class="nav-btn">برامج</a>
-            </li>
-            <li><a href="contact.html" class="nav-btn">تواصل معنا</a></li>
-        </ul>
-    </div>
-  </nav>
+ <!-- شريط التنقل -->
+ <nav class="navbar">
+  <!-- زر القائمة للهواتف -->
+  <div class="menu-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="nav-container">
+      <h2 class="logo">BTEC</h2>
+      <ul class="nav-links">
+          <li><a href="home.html" class="nav-btn">الرئيسية</a></li>
+          <li><a href="sources.html" class="nav-btn">عن البرنامج</a></li>
+          <li><a href="contact.html" class="nav-btn">تواصل معنا</a></li>
+          <li class="dropdown">
+              <a href="#" class="nav-btn">مصادر</a>
+              <ul class="dropdown-content">
+                  <li><a href="sources.html">برنامج المعلم</a></li>
+                  <li><a href="Programs.html">برامج الطلاب</a></li>
+              </ul>
+          </li>
+          <li><a href="Projects.html" class="nav-btn"> مشاريع</a></li>
+      </ul>
+  </div>
+</nav>
 
   <section id="about" class="program-info">
     <div class="container">
@@ -35,7 +48,7 @@
           </div>
         </div>
         <div class="program-image">
-          <img src="image8.png" alt="برنامج إدارة الطلاب" class="effect-3d">
+          <img src="image.png" alt="برنامج إدارة الطلاب" class="effect-3d">
         </div>
       </div>
     </div>
@@ -74,6 +87,6 @@
     </div>
   </div>
 
-  <script src="css/sources.css"></script>
+  <script src="js/sources.js"></script>
 </body>
 </html>

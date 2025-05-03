@@ -119,6 +119,34 @@
     opacity: 0;
     transform: translateY(50px);
   }
+
+.dropdown-content {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  background: #fff;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 999;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content li a {
+  color: #333;
+  padding: 10px 20px;
+  display: block;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.dropdown-content li a:hover {
+  background-color: #f4f4f4;
+}
   
   /* تأثير ظهور البطاقة */
   @keyframes slideUpCard {
