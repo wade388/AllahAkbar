@@ -65,13 +65,16 @@ body {
   transform: scale(1.05);
 }
 
-/* قائمة منسدلة */
-.dropdown-content {
+ .dropdown-content {
   display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
   position: absolute;
-  background-color: #2f4f4f;
-  min-width: 160px;
-  z-index: 1;
+  background: #fff;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 999;
 }
 
 .dropdown:hover .dropdown-content {
@@ -79,15 +82,15 @@ body {
 }
 
 .dropdown-content li a {
-  color: white;
-  text-decoration: none;
-  padding: 10px;
+  color: #333;
+  padding: 10px 20px;
   display: block;
+  text-decoration: none;
+  font-weight: 600;
 }
 
 .dropdown-content li a:hover {
-  background-color: #ffbb33;
-  color: #2f4f4f;
+  background-color: #f4f4f4;
 }
 
 /* قسم البرامج */
