@@ -163,6 +163,7 @@ body {
 .program-image img:hover {
     transform: rotateY(0deg) rotateX(0deg) scale(1.05);
 }
+
 .dropdown-content {
   display: none;
   list-style: none;
@@ -191,13 +192,11 @@ body {
   background-color: #f4f4f4;
 }
 
-
 .tutorials {
     display: flex;
     flex-direction: column;
     gap: 20px;
     padding: 50px;
-    
 }
 
 .tutorial-item {
@@ -218,6 +217,10 @@ body {
     flex-direction: row-reverse;
 }
 
+.tutorial-item.reverse:nth-child(4) {
+    flex-direction: row-reverse;
+}
+
 @keyframes slideIn {
     0% { opacity: 0; transform: translateX(-20px); }
     100% { opacity: 1; transform: translateX(0); }
@@ -235,13 +238,13 @@ body {
 }
 
 .tutorial-text h3 {
-    font-size: 1.6rem;
+    font-size: 3rem;
     font-weight: bold;
     color: #333;
 }
 
 .tutorial-text p {
-    font-size: 1rem;
+    font-size: 1.6rem;
     color: #666;
 }
 
