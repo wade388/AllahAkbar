@@ -144,7 +144,7 @@ body {
 }
 
 .program-text h1{
-    font-size: 50px;
+    font-size: 70px;
     font-weight: bold;
     color: #333;
     margin-bottom: 10px;
@@ -267,7 +267,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+     height: 100%; 
     background-color: rgba(0, 0, 0, 0.7); 
     z-index: 9999; 
     justify-content: center;
@@ -283,6 +283,10 @@ body {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     text-align: right;
     position: relative;
+}
+.popup-content iframe{
+    width: 100%;
+    
 }
 
 .close-btn {
@@ -313,4 +317,13 @@ body {
 a:hover + .cursor-dot,
 button:hover + .cursor-dot {
     transform: scale(2); 
+}
+
+#btn-download-BManage{
+    background: #2f4f4f;
+    color: white;
+}
+
+#btn-download-BManage:hover{
+    color: #ffbb33;
 }
