@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>موقع BTEC IT</title>
-  <link rel="stylesheet" href="css/home.css">
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
 
@@ -13,37 +13,49 @@
   <div class="welcome-popup">
     <div class="popup-content">
       <h2>أهلاً بك في موقع BTEC IT</h2>
-      <p>المطور من قبل وديع شطناوي </p>
+      <p>المطور من قبل وديع شطناوي</p>
+
+      <div class="video-wrapper">
+        <div class="video-container">
+          <h3>شرح وديع شطناوي</h3>
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/yFCJfM-Smnw"
+            title="شرح وديع شطناوي" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+        <div class="video-container">
+          <h3>شرح أيهم أبو دامس</h3>
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID_AYHAM"
+            title="شرح أيهم أبو دامس" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+
       <button id="start-btn" class="close-btn">ابدأ لتصفح</button>
     </div>
   </div>
+
   <!-- شريط التنقل -->
   <nav class="navbar">
-    <!-- زر القائمة للهواتف -->
-    <div class="menu-icon">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-
     <div class="nav-container">
-        <h2 class="logo">BTEC</h2>
-        <ul class="nav-links">
-            <li><a href="index.html" class="nav-btn">الرئيسية</a></li>
-            <li><a href="contact.html" class="nav-btn">تواصل معنا</a></li>
-            <li class="dropdown">
-                <a href="#" class="nav-btn">مصادر</a>
-                <ul class="dropdown-content">
-                    <li><a href="sources.html">برنامج المعلم</a></li>
-                    <li><a href="Programs.html">برامج الطلاب</a></li>
-                </ul>
-            </li>
-            <li><a href="Projects.html" class="nav-btn"> شروحات</a></li>
-        </ul>
+      <h2 class="logo">BTEC</h2>
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-btn">الرئيسية</a></li>
+        <li><a href="#contact" class="nav-btn">تواصل معنا</a></li>
+        <li class="dropdown">
+          <a href="#" class="nav-btn">مصادر</a>
+          <ul class="dropdown-content">
+            <li><a href="sources.html">برنامج المعلم</a></li>
+            <li><a href="Programs.html">برامج الطلاب</a></li>
+          </ul>
+        </li>
+        <li><a href="Projects.html" class="nav-btn">شروحات</a></li>
+      </ul>
     </div>
   </nav>
 
-  <!-- الرأس الرئيسي -->
+  <!-- رأس الصفحة -->
   <header id="home" class="main-header">
     <div class="container">
       <h1>ابدأ مستقبلك مع BTEC IT</h1>
@@ -52,6 +64,7 @@
     </div>
   </header>
 
+  <!-- عن البرنامج -->
   <section id="about" class="about-section">
     <div class="container">
       <h2>عن BTEC IT</h2>
@@ -59,7 +72,7 @@
     </div>
   </section>
 
-  <!-- قسم "مقررات البرنامج" -->
+  <!-- المقررات -->
   <section id="courses" class="courses-section">
     <div class="container">
       <h2>مقررات البرنامج</h2>
@@ -67,7 +80,7 @@
     </div>
   </section>
 
-  <!-- قسم "تواصل معنا" -->
+  <!-- التواصل -->
   <section id="contact" class="contact-section">
     <div class="container">
       <h2>تواصل معنا</h2>
@@ -75,6 +88,7 @@
     </div>
   </section>
 
+  <!-- الفوتر -->
   <footer class="footer">
     <div class="container">
       <p>&copy; wade3</p>
